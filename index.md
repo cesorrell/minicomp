@@ -13,9 +13,6 @@ layout: home
 
 2. m. Lugar alejado y de difícil acceso en el que se refugiaban los esclavos negros fugitivos.
 
-
-
-
 {% include inline_image.html collection='minicomp' pid='AGI00MP1' width="1000" height="500" %}
 
 
