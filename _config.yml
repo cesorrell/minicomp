@@ -1,0 +1,75 @@
+title: Palenques
+subtitle: Maroons During the English Conquest of Spanish Jamaica 1655-1660
+author: 
+  name: Clifton Sorrell
+  email: your-email@domain.com
+description:
+  This database brings together original Spanish and English colonial primary source materials created during the inter-imperial Anglo-Spanish struggle for Jamaica (1655-1660. These sources provide different insights about the island's Black fugitive maroon communities that emerged during the conflict 
+baseurl: "/wax-facets"
+
+# --------------------------------------------------------------
+# COLLECTION SETTINGS
+# --------------------------------------------------------------
+# Wax leverages Jekyll collections for much of its
+# functionality, therefor some of the keys below are from
+# Jekyll while others are Wax-specific.
+# For more info, refer to:
+# ~> https://jekyllrb.com/docs/collections/
+
+collections:
+  exhibits:
+    output: true
+  minicomp: # name of collection
+    output: true # makes sure pages are output as html files
+    layout: "minicomp_item" # the layout for the pages to use
+    metadata:
+      source: "minicomp.csv" # path to the metadata file within `_data`
+    images:
+      source: "raw_images/minicomp" # path to the directory of images within `_data`
+
+# --------------------------------------------------------------
+# SEARCH INDEX SETTINGS
+# --------------------------------------------------------------
+# You can create multiple search indexes below (though only one is
+# recommended!) by specifying
+# an `index` file to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:search` .
+
+search:
+  main:
+    index: "/search/index.json" # file the index will get written to
+    collections:
+      minicomp:
+        content: true # whether or not to index page content
+        fields: # the metadata fields to index
+          - creator
+          - location
+          - label
+          - timestamp
+          - object_type
+          - current_location
+          - reference
+          - language
+          - abstract_transcriptions
+
+# --------------------------------------------------------------
+# SITE MENU SETTINGS
+# --------------------------------------------------------------
+# Each menu item needs a `label` (whats shown), and a `link`
+# (where it goes). An item can optionally have a dropdown
+# submenu via `sub`.
+
+menu:
+  - label: "Exhibits"
+    sub:
+      - label: "The Landscape"
+        link: "/exhibits/map/"
+      - label: "Subset Collection"
+        link: "/exhibits/subset/"
+  - label: "Browse"
+    link: "/collection/"
+  - label: "Search"
+    link: "/search/"
+  - label: "About"
+    link: "/about/"
+    

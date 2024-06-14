@@ -1,0 +1,45 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/TNAPH002_obj1_Page_3",
+  "protocol": "http://iiif.io/api/image",
+  "width": 2537,
+  "height": 4041,
+  "sizes": [
+    {
+      "width": 2537,
+      "height": 4041
+    },
+    {
+      "width": 250,
+      "height": 398
+    },
+    {
+      "width": 1140,
+      "height": 1816
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}
